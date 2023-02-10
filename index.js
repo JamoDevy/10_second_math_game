@@ -2,9 +2,10 @@
 console.log("I brought my gears")
 
 $(document).ready(function(){
-var currentQuestion
-var timeLeft = 10
-var interval
+var currentQuestion;
+var timeLeft = 10;
+var interval;
+var score = 0;
 
 var randomNumberGenerator = function (size) {
     return Math.ceil(Math.random() * size);
@@ -31,6 +32,7 @@ var checkAnswer = function (userInput, answer) {
         renderNewQuestion();
         $('#user-input').val('');
         updateTimeLeft(+1);
+        updateScore(+1);
     }
   }
   
@@ -51,8 +53,9 @@ var checkAnswer = function (userInput, answer) {
     if (!interval) {
         if (timeLeft === 0){
             updateTimeLeft(10);
+            updateScore(-score);
         }
-        
+
       interval = setInterval(function () {
         updateTimeLeft(-1);
         if (timeLeft === 0) {
@@ -62,5 +65,10 @@ var checkAnswer = function (userInput, answer) {
       }, 1000);  
     }
   }
+
+  var updateScore = function (amount) {
+    score += amount;
+    $('#score').text(score);
+  };
 
 });

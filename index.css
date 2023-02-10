@@ -1,4 +1,36 @@
 /*index.css*/
 h2 {
     color: blue;
+    text-align: center;
   }
+
+.gameTitle {
+  text-align: center;
+}
+
+#equation {
+  margin-top: 50px;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  
+  text-align: center;
+}
+
+.answerForm {
+  text-align: center;
+}
+
+h4 {
+  margin-top: 150px;
+}
+
+.rules {
+  margin-top: 50px;
+}
+
