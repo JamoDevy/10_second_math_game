@@ -9,17 +9,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Space+Grotesk&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <h1 class="gameTitle">The 10 Second Math Game!</h1>
       <div class="row">
-        <div class="col-xs-12">
+        <div class="main col-xs-12">
           <h2>To Start Enter the First Answer When Ready</h2>
             <h1 id="equation"></h1>
             <h3 id="time-left"></h3>
                 <p>Seconds left</p>
-          
+          <div class="row">
             <div class="answerBox col-xs-12">
               <form class="answerForm">
             <input id="user-input" type="number" />
@@ -29,8 +32,10 @@
             <div class="rules">
               <p>Rules: You have 10 seconds at the start of each round.<br>
                 For each answer you get correct you get an added second.<br>
-                Have fun and enjoy!
+                To start again, answer where you left off or restart the page!<br>
+                Score is kept on the left, goodluck!
               </p>
+            </div>
         </div>
       </div>
     </div>
