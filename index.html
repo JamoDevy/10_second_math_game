@@ -18,7 +18,7 @@
       <h1 class="gameTitle">The 10 Second Math Game!</h1>
       <div class="row">
         <div class="main col-xs-12">
-          <h2>To Start Enter the First Answer When Ready</h2>
+          <h2>To Start, Check the Desired Operator Box and Enter the First Answer When Ready</h2>
             <h1 id="equation"></h1>
             <h3 id="time-left"></h3>
                 <p>Seconds left</p>
@@ -38,9 +38,14 @@
                   <input class='equation-type' id='divide' type='checkbox' value='false'>
                   <label for='divide'>/</label>
             </div>
+              <div class="containerNumberLimit">
+                  <label id='label' for='number-limit'>Number Limit</label>
+                  <h5 id='number-output'></h5>
+                  <input id='number-limit' class='' type='range' min='10' max='50' step='5'>
+                </div>
             <h4>Score: <span id="score"></span></h4>
             <div class="rules">
-              <p>Rules: First check the desired operator choice box for your game,<br>
+              <p>Rules: First check the desired operator choice box for your game and set your number limit<br>
                 Game begins upon answering the first question (easy 'addition' to start)<br> 
                 You have 10 seconds at the start of each round.<br>
                 For each answer you get correct you get an added second.<br>

@@ -8,6 +8,15 @@ var timeLeft = 10;
 var interval;
 var score = 0;
 
+const slider = document.getElementById('number-limit');
+const sliderDisplay = document.getElementById('number-output');
+    sliderDisplay.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      sliderDisplay.innerHTML = this.value;
+  }
+
+
 const plus = document.getElementById('plus');
 const minus = document.getElementById('minus');
 const times = document.getElementById('times');
@@ -44,13 +53,13 @@ var getOperator = function() {
   
   var questionGenerator = function () {
     var question = {};
-    var num1 = randomNumberGenerator(10);
-    var num2 = randomNumberGenerator(10);
+    var num1 = randomNumberGenerator(slider.value);
+    var num2 = randomNumberGenerator(slider.value);
 
         var smallestNumber;
 
         while(num1 === num2) {
-            num1 = randomNumberGenerator;
+            num1 = randomNumberGenerator(slider.value);
         }
 
         if (num1 < num2) {

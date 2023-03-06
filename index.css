@@ -70,3 +70,26 @@ div.main.col-xs-12 {
   padding-top: 35px;
   color: aliceblue;
 }
+
+input #number-limit {
+  width: 15%;
+  text-align: center;
+}
+
+#number-output {
+  text-align: center;
+}
+
+.containerNumberLimit {
+  text-align: center;
+  color: aliceblue;
+
+}
+
+input[type=range] {
+  display: inline;
+  width: 150px;
+  text-align: center;
+  align-content: center;
+}
+
