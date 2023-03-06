@@ -7,6 +7,7 @@ var operator;
 var timeLeft = 10;
 var interval;
 var score = 0;
+var highScore = 0;
 
 const slider = document.getElementById('number-limit');
 const sliderDisplay = document.getElementById('number-output');
@@ -128,7 +129,6 @@ var checkAnswer = function (userInput, answer) {
         if (timeLeft === 0){
             updateTimeLeft(10);
             updateScore(-score);
-            
         }
 
       interval = setInterval(function () {
@@ -136,7 +136,7 @@ var checkAnswer = function (userInput, answer) {
         if (timeLeft === 0) {
           clearInterval(interval);
           interval = undefined;
-
+          updateHighScore();
         }
       }, 1000);  
     }
@@ -148,5 +148,12 @@ var checkAnswer = function (userInput, answer) {
     score += amount;
     $('#score').text(score);
   };
+
+  var updateHighScore = function () {
+    if (score > highScore){
+    highScore = score;
+    }
+    $('#highScore').text(highScore);
+  }
 
 });
