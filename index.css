@@ -64,3 +64,9 @@ div.main.col-xs-12 {
   background-color: brown;
   width: 100%;
 } */
+
+.containerEquations {
+  text-align: center;
+  padding-top: 35px;
+  color: aliceblue;
+}
