@@ -23,7 +23,7 @@ var getOperator = function() {
             operators.push('+');
         }
     if (minus.checked === true) {
-            operators.push('-');
+            operators.push('-');  
         }
     if (times.checked === true) {
             operators.push('*');
@@ -75,8 +75,7 @@ var getOperator = function() {
             question.answer = num3 / num1;
             question.equation = String(num3) + operator + String(num1);
         }
-    // question.answer = num1 + num2;
-    // question.equation = String(num1) + " + " + String(num2);
+    
     console.log(num1);
     console.log(num2);
     console.log(num3);
@@ -120,6 +119,7 @@ var checkAnswer = function (userInput, answer) {
         if (timeLeft === 0){
             updateTimeLeft(10);
             updateScore(-score);
+            
         }
 
       interval = setInterval(function () {
@@ -127,10 +127,13 @@ var checkAnswer = function (userInput, answer) {
         if (timeLeft === 0) {
           clearInterval(interval);
           interval = undefined;
+
         }
       }, 1000);  
     }
   }
+
+  //$('#equation').one('click', startGame());
 
   var updateScore = function (amount) {
     score += amount;
